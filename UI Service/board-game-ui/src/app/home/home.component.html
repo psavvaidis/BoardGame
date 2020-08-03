@@ -3,4 +3,17 @@
 <nav>
   <button routerLink="/chess"> Chess </button>
   <button routerLink="/tic-tac-toe">  Tic Tac Toe</button>
+  <button routerLink="/login"> LOGIN </button>
+  <div>
+    <form [formGroup]="testForm" (ngSubmit)=sendMsg(testForm.value)>
+      <label for="message"> Message </label>
+      <input type="text" formControlName="message" value="test"/><br><br>
+      <input type="number" formControlName="xCoord" value="1"/>
+      <input type="number" formControlName="yCoord" value="2"/>
+      <input type="number" formControlName="nextxCoord" value="3"/>
+      <input type="number" formControlName="nextyCoord" value="4" />
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
 </nav>

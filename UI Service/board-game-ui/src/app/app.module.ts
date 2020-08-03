@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { TictactoecellDirective } from './tictactoe/tictactoecell.directive';
 import { AppSelect } from './chess/appselect';
 import { MovePawnDirective } from './chess/move-pawn.directive';
+import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +24,15 @@ import { MovePawnDirective } from './chess/move-pawn.directive';
     LoginComponent,
     TictactoecellDirective,
     AppSelect,
-    MovePawnDirective
+    MovePawnDirective,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

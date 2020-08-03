@@ -1,0 +1,16 @@
+<h2 class="title"> Login to Board Games! </h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+  <label>Username: </label>
+  <input formControlName="username" placeholder="username" type="text" id="username"/>
+
+  <label>Email: </label>
+  <input formControlName="email" placeholder="john@doe.io" type="email" id="email"/>
+
+  <label> Password: </label>
+  <input formControlName="password" placeholder="password" type="password" id="password" />
+
+  <label> Confirm Password: </label>
+  <input formControlName="conf_password" placeholder="confirm password" type="password" id="password-confirm" />
+
+  <button type="submit">Register Now</button>
+</form><br><br>

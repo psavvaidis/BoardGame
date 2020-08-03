@@ -1,1 +1,12 @@
-<p>login works!</p>
+<h2 class="title"> Login to Board Games! </h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <label>Username: </label>
+  <input formControlName="username" placeholder="username" type="text" id="username"/>
+
+  <label> Password: </label>
+  <input formControlName="password" placeholder="password" type="password" id="password" />
+
+  <button type="submit">Submit</button>
+</form><br><br>
+
+<a routerLink="/register">Don't you have an account? Easy Register Now!</a>
